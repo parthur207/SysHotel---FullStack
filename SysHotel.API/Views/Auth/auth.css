@@ -16,23 +16,51 @@ body {
     place-items: center;
     padding: 0 32px;
 
-    background-image: url(Images/background-login-syshotel.png);
+    /* Manter essas propriedades é o ideal para o background responsivo */
+    background-image: url(/SysHotel.API/Views/Images/background-login-syshotel.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: cover; 
+    background-position: center; 
+}
+@media (max-width: 600px) {
+    .card-login{
+        width: 90%;
+        padding: 30px 15px;
+    }
+    
+    /* Ajustes para a LOGO em telas pequenas */
+    .syshotel-logo {
+        /* Usamos 'vh' de novo, ou até um valor menor para economizar espaço no celular */
+        top: 2vh; 
+    }
+
+    .syshotel-logo img {
+        /* Reduz o tamanho da logo em telas menores */
+        width: 150px; 
+        border-width: 3px; 
+    }
+
+    /* Outros ajustes opcionais para o body */
+    body {
+        /* Remove o padding lateral em telas muito pequenas, aproveitando todo o espaço */
+        padding: 0; 
+    }
 }
 
-/* img logo*/
 
 /* Logo principal SysHotel */
 .syshotel-logo {
     position: absolute; /* O pai da imagem é posicionado */
-    top: 20px; /* Distância do topo da tela. Ajuste conforme sua imagem de fundo. */
+    top: 5vh; /* Distância do topo da tela. Ajuste conforme sua imagem de fundo. */
+    left: 50%;
+    transform: translate(-50%);
     z-index: 100; /* Garante que fique acima de tudo */
+    margin-bottom: 20px;
 }
 .syshotel-logo img {
-    width: 250px; /* Tamanho um pouco menor para se encaixar na posição do círculo */
+    width: 150px; /* Tamanho um pouco menor para se encaixar na posição do círculo */
     height: auto;
+    position: relative;
     border-radius: 100vmin;
     border: 5px solid #E6853A; 
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);  
@@ -40,7 +68,7 @@ body {
 
 /* Card */
 .card-login {
-    width: 400px;
+    width: 450px;
     padding:30px 25px;
     background: linear-gradient(
         180deg,
@@ -113,6 +141,7 @@ body {
 
 .input-box input:focus {
     border-color: #ff6b6b;
+    border-width: 0.2vmin;
     box-shadow: 0 0 8px rgba(255, 107, 107, 0.6);
 }
 
@@ -124,6 +153,13 @@ body {
     transform: translateY(-50%);
     color: #666;
 }
+
+.toggle-password{
+    cursor: pointer;
+    right: 15px;
+}
+
+
 
 /* Opções */
 .options {
