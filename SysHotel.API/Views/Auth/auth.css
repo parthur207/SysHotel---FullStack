@@ -51,10 +51,10 @@ body {
 /* Logo principal SysHotel */
 .syshotel-logo {
     position: absolute; /* O pai da imagem é posicionado */
-    top: 5vh; /* Distância do topo da tela. Ajuste conforme sua imagem de fundo. */
+    top: 2vh; /* Distância do topo da tela. Ajuste conforme sua imagem de fundo. */
     left: 50%;
     transform: translate(-50%);
-    z-index: 100; /* Garante que fique acima de tudo */
+    z-index: auto; /* Garante que fique acima de tudo */
     margin-bottom: 20px;
 }
 .syshotel-logo img {
