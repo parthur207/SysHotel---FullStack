@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sidebar.css">
-    
     <title>SideBar - Component</title>
+    <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
-    
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="/SysHotel.API/Views/Images/SysHotel-logo.png" alt="Logo" class="logo"> 
+            <h2>Bem-Vindo!</h2>
+        </div>
+
+        <ul class="menu-list">
+            <li><a href="#"><img src="Images/account.png" alt="">Meu perfil</a></li>
+            <li><a href="#"><img src="Images/home-sidebar.png" alt="">Início</a></li>
+            <li><a href="#"><img src="Images/calendar-sidebar.png" alt="">Minhas reservas</a></li>
+            <li><a href="#"><img src="Images/room-sidebar.png" alt="">Quartos disponíveis</a></li>
+            <li><a href="#"><img src="Images/payments-sidebar.png" alt="">Históricos de pagamentos</a></li>
+            <li><a href="#"><img src="Images/reviews-sidebar.png" alt="">Avaliações</a></li>
+        </ul>
+
+        <div class="menu-footer">
+            <a href="#"><img src="Images/logout-sidebar.png" alt="">Sair</a>
+        </div>
+    </nav>
 </body>
 </html>
