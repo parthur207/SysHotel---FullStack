@@ -7,31 +7,34 @@ body {
 
 .sidebar {
     position: fixed;
-    left: 0;
+    left: 0px;
     top: 0;
     width: 250px;
     height: 100vh;
     background: linear-gradient(180deg, #ff7b00, #ff5722);
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    padding: 20px 15px;
+    overflow-y: hidden;
+    padding: 0px 15px;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15);
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
+    transition: width 0.3s ease, padding 0.3s ease;
+
 }
 
 /* ====== Cabeçalho ====== */
 .sidebar-header {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .sidebar-header .logo {
+    margin-top: 10px;
     width: 130px;
     height: 100px;
     position: relative;
-    opacity: 0.8;
+    opacity: 0.9;
     border-radius: 100vmin;
     border: 5px solid #7cbcbc; 
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);  
@@ -39,7 +42,7 @@ body {
 
 .sidebar-header h2 {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 10px;
 }
 
@@ -47,7 +50,7 @@ body {
 .menu-list {
     list-style: square;
     color: white;
-    padding: 0;
+    padding:0;
     margin: 0;
     flex-grow: 1;
 }
@@ -86,8 +89,10 @@ body {
 
 /* ====== Rodapé ====== */
 .menu-footer {
+    margin-bottom: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 15px;
+    
 }
 
 .menu-footer a {
@@ -95,7 +100,7 @@ body {
     align-items: center;
     text-decoration: none;
     color: white;
-    padding: 20px 15px 50px ;
+    padding: 20px 15px 30px ;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -105,4 +110,36 @@ body {
 .menu-footer a img {
     width: 20px;
     height: 20px;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 50%;
+    width: 50px;
+    left: 250px; /* acompanha a borda do sidebar */
+    transform: translateY(-50%);
+    background-color: #fc6c14;
+    border-top-right-radius: 10px;
+    border-width: 1px;
+    border-bottom-right-radius: 10px;
+ 
+    cursor: pointer;
+    z-index: 999;
+    transition: left 0.3s ease;
+}
+
+.toggle-btn img {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+}
+
+/* ====== Sidebar fechada ====== */
+.sidebar.closed {
+    width: 0;
+    padding: 0;
+}
+
+.sidebar.closed ~ .toggle-btn {
+    left: 10 /* botão encosta na borda */
 }
