@@ -1,4 +1,4 @@
-namespace SysHotel.API
+namespace SysHotel.API.Main
 {
     public class Program
     {
