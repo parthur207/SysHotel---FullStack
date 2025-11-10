@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SysHotel.Domain.Entities
+namespace SysHotel.Domain.ValueObjects
 {
-    internal class GuestEntity
+    public class BookingCodeVO
     {
     }
 }
