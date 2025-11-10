@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile_Screen</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+  
+
+    <div class="MeuPerfil">
+        <H2>Meu Perfil</H2>
+        <div class="Nome">
+            <label class="labelNome"> Nome completo:</label>
+            <label class="labelNomeDataBinding"></label>
+        </div>
+        <div class="Email">
+            <label class="labelEmail"> Email:</label>
+            <label class="labelEmailBinding"></label>
+        </div>
+         <div class="DataNacimento">
+            <label class="labelDataNascimento"> Data de Nascimento:</label>
+            <label class="labelDataNascimentoBinding"></label>
+        </div>
+         <div class="QuantidadeReservas">
+            <label class="labelQuantidadeReservas"> Reservas realizadas:</label>
+            <label class="labelQuantReservasDataBinding"></label>
+        </div>
+    </div>
+    
+
+    <div class="InformacoesPessoais">
+        <button type="button">Editar dados pessoais</button>
+        
+    </div>
+     <script src="profile.js"></script>
+        <script>
+        loadComponent(
+            '/SysHotel.API/Views/SideBar/sidebar.html',
+            '/SysHotel.API/Views/SideBar/sidebar.css',
+            '/SysHotel.API/Views/SideBar/sidebar.js',
+            '#sidebar-container'
+        );
+        </script>
+</body>
+  
+</html>
