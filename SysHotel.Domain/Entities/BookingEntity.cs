@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Domain.Entities
 {
-    public class BookingEntity : BaseEntity
+    public class BookingEntity
     {
         public BookingEntity(BookingCodeVO bookingCode, DateTime checkInDate, DateTime checkOutDate, decimal price, int floor, int roomNumber, List<string> guests)
         {
@@ -20,7 +20,7 @@ namespace SysHotel.Domain.Entities
             Guests = guests;
         }
 
-        public BookingCodeVO BookingCode { get; set; }
+        public BookingCodeVO BookingCode { get; set; } //PK
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
         public DateTime DatePurchase { get; set; }
