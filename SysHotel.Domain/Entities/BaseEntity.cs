@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Domain.Entities
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntity//teste
     {
         public BaseEntity()
         {
