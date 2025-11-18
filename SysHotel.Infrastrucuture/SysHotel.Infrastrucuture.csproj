@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Auth\" />
-    <Folder Include="RepositoriesServices\" />
+    <Folder Include="Auth\AuthRepositories\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +22,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SysHotel.Domain\SysHotel.Domain.csproj" />
   </ItemGroup>
 
 </Project>

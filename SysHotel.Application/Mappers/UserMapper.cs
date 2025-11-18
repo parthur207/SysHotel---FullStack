@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SysHotel.Domain.ValueObjects
+namespace SysHotel.Application.Mappers
 {
-    public class BookingCodeVO
+    internal class UserMapper
     {
     }
 }
