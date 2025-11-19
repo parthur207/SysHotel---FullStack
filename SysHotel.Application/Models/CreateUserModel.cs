@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Application.Models
 {
-    internal class CreateUserModel
+    public class CreateUserModel
     {
     }
 }

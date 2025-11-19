@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Application.Models
 {
-    internal class LoginUserModel
+    public class LoginUserModel
     {
+
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

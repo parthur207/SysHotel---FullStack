@@ -8,5 +8,7 @@ namespace SysHotel.Application.DTOs
 {
     public class UserDTO
     {
+
+
     }
 }
