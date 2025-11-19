@@ -1,4 +1,5 @@
-﻿using SysHotel.Domain.ResponsePattern;
+﻿using SysHotel.Domain.Entities;
+using SysHotel.Domain.ResponsePattern;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace SysHotel.Application.RepositoriesInterface
     public interface IUserAuthRepositoryInterface
     {
 
-        Task<SimpleResponseModel> CreateUserRepository
+        Task<SimpleResponseModel> CreateUserAsync(UserEntity NewUser);
+
+        Task<ResponseModel<string>> LoginAsync(UserEntity UserLogin);
     }
 }

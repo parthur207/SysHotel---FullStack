@@ -48,9 +48,9 @@ namespace SysHotel.Infrastrucuture.Auth.AuthRepositories
                     return Response;
                 }
 
-                var ResposeJWT = _jwtInterface.GenerateToken();
+                var TokenJWT = _jwtInterface.GenerateToken(UserLogin.UserId, UserLogin.Role);
 
-                Response.Content = UserLogin;
+                Response.Content = TokenJWT;
                 Response.Status = ResponseStatusEnum.Success;
             }
             catch (Exception ex)
@@ -61,7 +61,7 @@ namespace SysHotel.Infrastrucuture.Auth.AuthRepositories
             }
             return Response;
         }
-        public async Task<SimpleResponseModel> CreateUserAsync(UserEntity User)
+        public async Task<SimpleResponseModel> CreateUserAsync(UserEntity newUser)
         {
             var Response = new SimpleResponseModel();
             try
