@@ -45,7 +45,6 @@ namespace SysHotel.Domain.Entities
             UserId = userId;
         }
 
-        public 
         public SimpleResponseModel ConfirmPayment()
         {
             if(BookingStatus is BookingStatusEnum.Reservaded)
@@ -67,7 +66,6 @@ namespace SysHotel.Domain.Entities
                 BookingStatus = BookingStatusEnum.Reservaded;
                 return new SimpleResponseModel { Status = ResponseStatusEnum.Success, Messsage = "Pagemento confirmado com sucesso." };
             }
-
         }
     }
 }

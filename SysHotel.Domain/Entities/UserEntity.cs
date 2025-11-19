@@ -13,13 +13,13 @@ namespace SysHotel.Domain.Entities
     public class UserEntity
     {
 
-        public UserEntity(string email, PasswordHashVO Password)
+        public UserEntity(EmailVO email, PasswordHashVO Password)
         {
             Email = email;
             PasswordHash = Password;
         }
 
-        public UserEntity(string name, DateOnly bithDate, int phoneNumber, int cEP, string state, string city, string anddress, string email, PasswordHashVO password)
+        public UserEntity(string name, DateOnly bithDate, int phoneNumber, int cEP, string state, string city, string anddress, EmailVO email, PasswordHashVO password)
         {
             Name = name;
             BithDate = bithDate;
@@ -43,7 +43,7 @@ namespace SysHotel.Domain.Entities
         public string State { get; private set; }
         public string City { get; private set; }
         public string Anddress { get; private set; }
-        public string Email { get; private set; }
+        public EmailVO Email { get; private set; }
         public PasswordHashVO PasswordHash { get; private set; }
         public List<BookingEntity>? BookingHistory { get; private set; }
         public bool Active { get; private set; }

@@ -9,7 +9,7 @@
   <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <Folder Include="UseCases\" />
   </ItemGroup>
 
   <ItemGroup>

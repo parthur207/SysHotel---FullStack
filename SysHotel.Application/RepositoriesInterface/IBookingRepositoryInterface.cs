@@ -12,7 +12,7 @@ namespace SysHotel.Application.RepositoriesInterface
     public interface IBookingRepositoryInterface
     {
         //User
-        Task<ResponseModel<List<BookingEntity>>> GetAllBookingsByUserId(int Size = 5);
+        Task<ResponseModel<List<BookingEntity>>> GetAllBookingsByUserId(int Size = 5, Guid userId);
 
         //Adm
         Task<ResponseModel<List<BookingEntity>>> GetAllBookingsByEmail(EmailVO Email);
