@@ -14,12 +14,12 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Infrastrucuture.Auth.AuthRepositories
 {
-    public class UseAuthRepository : IUserAuthRepositoryInterface
+    public class UserAuthRepository : IUserAuthRepositoryInterface
     {
 
         private readonly DbContextSysHotel _dbContextSysHotel;
         private readonly IJwtInterface _jwtInterface;
-        public UseAuthRepository(DbContextSysHotel dbContextSysHotel, IJwtInterface jwtInterface)
+        public UserAuthRepository(DbContextSysHotel dbContextSysHotel, IJwtInterface jwtInterface)
         {
             _dbContextSysHotel= dbContextSysHotel;
             _jwtInterface= jwtInterface;

@@ -8,8 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="UseCases\" />
+    <Folder Include="Interfaces\IHelpers\" />
+    <Folder Include="Interfaces\IMappers\" />
   </ItemGroup>
 
   <ItemGroup>
