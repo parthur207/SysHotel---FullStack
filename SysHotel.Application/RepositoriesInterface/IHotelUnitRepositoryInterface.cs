@@ -1,4 +1,5 @@
 ﻿using SysHotel.Application.DTOs;
+using SysHotel.Domain.Entities;
 using SysHotel.Domain.ResponsePattern;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Application.RepositoriesInterface
 {
-    public interface HotelUnitRepositoryInterface
+    public interface IHotelUnitRepositoryInterface
     {
 
-        Task<ResponseModel<List<HotelUnitDTO>>> GetAllHotelsAsync();
+        Task<ResponseModel<List<HotelUnitEntity>>> GetAllHotelsAsync();
     }
 }

@@ -51,6 +51,21 @@ namespace SysHotel.Domain.Entities
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
 
+        public SimpleResponseModel SetToActive()
+        {
+
+            if (!Active)
+            {
+                Active = true;
+                return new SimpleResponseModel { Status = ResponseStatusEnum.Success };
+            }
+            else
+            {
+                return new SimpleResponseModel { Messsage = "O usuário já está ativo.", Status = ResponseStatusEnum.Error };
+
+            }
+        }
+
         public SimpleResponseModel SetToInactive()
         {
           

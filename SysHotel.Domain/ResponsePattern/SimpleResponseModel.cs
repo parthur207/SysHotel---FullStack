@@ -13,7 +13,7 @@ namespace SysHotel.Domain.ResponsePattern
         {
         }
 
-        public string? Messsage { get; set; }
+        public string? Message { get; set; }
         public ResponseStatusEnum Status { get; set; }
     }
 }
