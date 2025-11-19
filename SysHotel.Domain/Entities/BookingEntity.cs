@@ -25,7 +25,7 @@ namespace SysHotel.Domain.Entities
             Guests = guests;
         }
 
-        public string BookingCode { get; private set; } //PK
+        public string BookingCodeID { get; private set; } //PK
         public DateTime CheckInDate { get; private set; }
         public DateTime CheckOutDate { get; private set; }
         public DateTime DatePurchase { get; private set; }
@@ -37,7 +37,7 @@ namespace SysHotel.Domain.Entities
         public int Floor { get; private set; }
         public int RoomNumber { get; private set; }
         public List<string> Guests { get; private set; }
-        public Guid UserId { get;  private set; }
+        public Guid UserId { get;  private set; } //PF
         public UserEntity User { get; private set; }
 
         public void AssignUserId(Guid userId)
@@ -45,6 +45,7 @@ namespace SysHotel.Domain.Entities
             UserId = userId;
         }
 
+        public 
         public SimpleResponseModel ConfirmPayment()
         {
             if(BookingStatus is BookingStatusEnum.Reservaded)

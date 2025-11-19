@@ -33,6 +33,7 @@ namespace SysHotel.Domain.Entities
             BookingHistory = new List<BookingEntity>();
             CreatedAt = DateTime.Now;
             Active = true;
+            Role = UserRoleEnum.UserCommom;
         }
         public Guid UserId { get; private set; }
         public string Name { get; private set; }
@@ -45,7 +46,8 @@ namespace SysHotel.Domain.Entities
         public string Email { get; private set; }
         public PasswordHashVO PasswordHash { get; private set; }
         public List<BookingEntity>? BookingHistory { get; private set; }
-        public  bool Active { get; private set; }
+        public bool Active { get; private set; }
+        public UserRoleEnum Role { get; private set; } 
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
 

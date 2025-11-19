@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Application.Mappers
 {
-    internal class UserMapper
+    public class UserMapper
     {
     }
 }

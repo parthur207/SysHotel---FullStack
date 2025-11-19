@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SysHotel.Application\SysHotel.Application.csproj" />
     <ProjectReference Include="..\SysHotel.Domain\SysHotel.Domain.csproj" />
   </ItemGroup>
 

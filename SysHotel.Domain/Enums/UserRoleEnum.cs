@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SysHotel.Application.DTOs
+namespace SysHotel.Domain.Enums
 {
-    public class UserDTO
+    public enum UserRoleEnum
     {
+
+        UserCommom=1,
+        Adm=2
     }
 }

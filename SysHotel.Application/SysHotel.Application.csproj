@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Helpers\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="RepositoriesInterface\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SysHotel.Domain\SysHotel.Domain.csproj" />
   </ItemGroup>
 
 </Project>

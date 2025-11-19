@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Application.DTOs
 {
-    internal class BookingDTO
+    public class BookingDTO
     {
     }
 }
