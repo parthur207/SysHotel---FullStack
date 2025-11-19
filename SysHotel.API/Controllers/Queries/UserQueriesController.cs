@@ -8,12 +8,7 @@ namespace SysHotel.API.Controllers.Queries
     [ApiController]
     public class UserQueriesController : ControllerBase
     {
-        [HttpPost("login")]
-        public async Task<IActionResult> PostLogin([FromBody] Create)
-        {
 
-            return Ok();
-        }
 
         // GET api/<UserController>/5
         [HttpGet("{idUser}")]

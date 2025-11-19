@@ -61,7 +61,7 @@ namespace SysHotel.Infrastrucuture.RepositoriesServices
             return Response;
         }
 
-        public async Task<ResponseModel<List<BookingEntity>>> GetAllBookingsByUserId(int Size = 5, Guid userId)
+        public async Task<ResponseModel<List<BookingEntity>>> GetAllBookingsByUserId(int Size, Guid userId)
         {
             var Response = new ResponseModel<List<BookingEntity>>();
             try

@@ -11,7 +11,7 @@ namespace SysHotel.Application.RepositoriesInterface
 {
     public interface IHotelUnitRepositoryInterface
     {
-
+        Task<SimpleResponseModel> CreateHotelUnitAsync(HotelUnitEntity newHotelUnit);
         Task<ResponseModel<List<HotelUnitEntity>>> GetAllHotelsAsync();
     }
 }

@@ -28,7 +28,6 @@ namespace SysHotel.API.Controllers.Commands
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginUserModel loginModel)
         {
-            _jwtInterface.GenerateToken();
             return Ok();
         }
 

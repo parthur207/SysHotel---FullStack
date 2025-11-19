@@ -66,20 +66,20 @@ namespace SysHotel.Infrastrucuture.Auth.AuthRepositories
             var Response = new SimpleResponseModel();
             try
             {
-                if (User == null)
+                if (newUser == null)
                 {
                     Response.Status = ResponseStatusEnum.Error;
                     Response.Message = "Existem dados de cadastro nulos.";
                 }
 
-                if (await _dbContextSysHotel.User.AnyAsync(x => x.Email.Endereco == User.Email))
+                if (await _dbContextSysHotel.User.AnyAsync(x => x.Email.Endereco == newUser.Email))
                 {
                     Response.Message = "Ocorreu um erro inesperado.";
                     Response.Status = ResponseStatusEnum.Error;
                     return Response;
                 }
 
-                await _dbContextSysHotel.User.AddAsync(User);
+                await _dbContextSysHotel.User.AddAsync(newUser);
                 await _dbContextSysHotel.SaveChangesAsync();
 
                 Response.Status = ResponseStatusEnum.Success;

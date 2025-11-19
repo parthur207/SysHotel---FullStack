@@ -14,14 +14,11 @@ namespace SysHotel.Application.RepositoriesInterface
     public interface IUserRepositoryInterface
     {
         //Queries
-        Task<ResponseModel<UserEntity>> LoginAsync(UserEntity User);
         Task<ResponseModel<UserEntity>> GetUserByIdAsync(Guid UserId);
-
         Task<ResponseModel<UserEntity>> GetUserByEmailAsync(EmailVO Email);
 
 
         //Commands
-        Task<SimpleResponseModel> CreateUserAsync(UserEntity User);
 
         Task<SimpleResponseModel> InactiveUserByEmailAsync(EmailVO Email);
         Task<SimpleResponseModel> ActiveUserByEmailAsync(EmailVO Email);

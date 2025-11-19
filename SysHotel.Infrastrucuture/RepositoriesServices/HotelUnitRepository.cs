@@ -54,5 +54,33 @@ namespace SysHotel.Infrastrucuture.RepositoriesServices
             }
             return Response;
         }
+
+        public async Task<SimpleResponseModel> CreateHotelUnitAsync(HotelUnitEntity newHotelUnit)
+        {
+            var Response= new SimpleResponseModel();
+            try
+            {
+                if (await _dbContextSysHotel.HotelUnit.AnyAsync(x=>x.Name==newHotelUnit.Name))
+                {
+                    Response.Message = "Já existe um hotel com o nome informado.";
+                    Response.Status=ResponseStatusEnum.Error;
+                    return Response;
+                }
+
+                await _dbContextSysHotel.HotelUnit.AddAsync(newHotelUnit);
+                await _dbContextSysHotel.SaveChangesAsync();
+
+                Response.Status = ResponseStatusEnum.Success;
+                Response.Message = "Um novo hotel foi criado com sucesso.";
+            }
+            catch (Exception ex)
+            {
+                Response.Status=ResponseStatusEnum.CriticalError;
+                Response.Message = "Ocorreu um erro inesperado.";
+
+                Debug.WriteLine("Ocorreu um erro inesperado"+ex.Message);
+            }
+            return Response;
+        }
     }
 }

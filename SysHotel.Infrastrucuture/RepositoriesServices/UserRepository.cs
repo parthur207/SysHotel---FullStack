@@ -69,7 +69,7 @@ namespace SysHotel.Infrastrucuture.RepositoriesServices
         }
 
 
-        public async Task<ResponseModel<UserDTO>> GetUserByEmailAsync(EmailVO Email)
+        public async Task<ResponseModel<UserEntity>> GetUserByEmailAsync(EmailVO Email)
         {
             throw new NotImplementedException();
         }
