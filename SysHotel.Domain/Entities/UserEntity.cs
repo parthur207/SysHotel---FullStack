@@ -61,7 +61,7 @@ namespace SysHotel.Domain.Entities
             }
             else
             {
-                return new SimpleResponseModel { Messsage = "O usuário já está ativo.", Status = ResponseStatusEnum.Error };
+                return new SimpleResponseModel { Message = "O usuário já está ativo.", Status = ResponseStatusEnum.Error };
 
             }
         }
@@ -76,7 +76,7 @@ namespace SysHotel.Domain.Entities
             }
             else
             {
-                return new SimpleResponseModel { Messsage = "O usuário já está inativo.", Status = ResponseStatusEnum.Error };
+                return new SimpleResponseModel { Message = "O usuário já está inativo.", Status = ResponseStatusEnum.Error };
 
             }
         }

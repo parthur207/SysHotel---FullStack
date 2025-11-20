@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Application.UseCases.Queries
 {
-    public class BookingQueries
+    public class BookingQueries : IBooki
     {
     }
 }

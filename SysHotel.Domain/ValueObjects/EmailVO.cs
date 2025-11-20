@@ -7,14 +7,14 @@ namespace SysHotel.Domain.ValueObjects
     {
         public string Endereco { get; }
 
-        // Regex simples e eficiente para validar formato básico de e-mail
+        //Regex para validar formato básico de e-mail
         private const string EmailRegexPattern =
             @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
         private static readonly Regex EmailRegex =
             new Regex(EmailRegexPattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        // Construtor imutável
+        //imutável
         public EmailVO(string endereco)
         {
             if (string.IsNullOrWhiteSpace(endereco))
@@ -26,10 +26,9 @@ namespace SysHotel.Domain.ValueObjects
             Endereco = endereco.Trim();
         }
 
-        // Evita new desnecessário
+    
         public static EmailVO From(string endereco) => new EmailVO(endereco);
 
-        // Igualdade de Value Object
         public bool Equals(EmailVO? other)
         {
             if (other is null) return false;
@@ -41,7 +40,6 @@ namespace SysHotel.Domain.ValueObjects
         public override int GetHashCode() =>
             Endereco.ToLowerInvariant().GetHashCode();
 
-        // Conversão implícita (qualidade de vida)
         public static implicit operator string(EmailVO email) => email.Endereco;
 
         public override string ToString() => Endereco;
