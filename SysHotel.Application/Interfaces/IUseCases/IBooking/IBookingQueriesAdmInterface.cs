@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysHotel.Application.Interfaces.IUseCases.Booking
 {
-    public interface BookingQueriesAdmInterface
+    public interface IBookingQueriesAdmInterface
     {
     }
 }

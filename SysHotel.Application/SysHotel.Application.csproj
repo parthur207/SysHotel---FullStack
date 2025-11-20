@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="Interfaces\IHelpers\" />
-    <Folder Include="Interfaces\IMappers\" />
   </ItemGroup>
 
   <ItemGroup>

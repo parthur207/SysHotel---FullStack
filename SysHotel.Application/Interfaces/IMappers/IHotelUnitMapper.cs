@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SysHotel.Application.Interfaces.IUseCases.Booking
+namespace SysHotel.Application.Interfaces.IMappers
 {
-    public interface IBookingCommandsAdmInterface
+    internal class IHotelUnitMapper
     {
     }
 }
