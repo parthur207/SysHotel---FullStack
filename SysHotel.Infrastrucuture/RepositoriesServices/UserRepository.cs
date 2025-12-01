@@ -71,8 +71,56 @@ namespace SysHotel.Infrastrucuture.RepositoriesServices
 
         public async Task<ResponseModel<UserEntity>> GetUserByEmailAsync(EmailVO Email)
         {
-            throw new NotImplementedException();
+            var Response= new ResponseModel<UserEntity>();
+            try
+            {
+                var user = await _dbContextSysHotel.User.FirstOrDefaultAsync(x=>x.Email.Endereco==Email.Endereco);
+
+                if (user is null)
+                {
+                    Response.Message = "O e-mail informado não existe.";
+                    Response.Status= ResponseStatusEnum.NotFound;
+                    return Response;
+                }
+
+                Response.Status= ResponseStatusEnum.Success;
+                Response.Content = user;
+            }
+            catch (Exception ex)
+            {
+                Response.Status= ResponseStatusEnum.CriticalError;
+                Response.Message = "Ocorreu um erro inesperado.";
+                Debug.WriteLine($"Ocorreu um erro inesperado: {ex.Message}");
+            }
+            return Response;
         }
+
+        public async Task<ResponseModel<List<UserEntity>>> GetAllUsersAsync(int page, int size)
+        {
+            var Response = new ResponseModel<List<UserEntity>>();
+            try
+            {
+                var usersList = await _dbContextSysHotel.User.ToListAsync();
+
+                if (usersList is null || !usersList.Any())
+                {
+                    Response.Message = "Nenhum usuário foi encontrado.";
+                    Response.Status = ResponseStatusEnum.NotFound;
+                    return Response;
+                }
+
+                Response.Status = ResponseStatusEnum.Success;
+                Response.Content = usersList;
+            }
+            catch (Exception ex)
+            {
+                Response.Status = ResponseStatusEnum.CriticalError;
+                Response.Message = "Ocorreu um erro inesperado.";
+                Debug.WriteLine($"Ocorreu um erro inesperado: {ex.Message}");
+            }
+            return Response;
+        }
+
 
         public async Task<ResponseModel<UserEntity>> GetUserByIdAsync(Guid userId)
         {

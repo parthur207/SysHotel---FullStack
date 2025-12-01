@@ -9,5 +9,7 @@ namespace SysHotel.Application.UseCases.Queries
 {
     public class BookingQueries : IBookingQueriesInterface
     {
+
+        private 
     }
 }
