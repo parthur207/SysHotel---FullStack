@@ -18,10 +18,7 @@ namespace SysHotel.Application.UseCases.Queries
         {
             _userRepository = userRepository;
         }
-        public async Task<SimpleResponseModel> GetAllUsers(int page, int size)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public async Task<SimpleResponseModel> GetUserByEmail(EmailVO UserEmail)
         {
