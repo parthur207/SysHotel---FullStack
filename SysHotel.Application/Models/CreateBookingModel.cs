@@ -8,5 +8,10 @@ namespace SysHotel.Application.Models
 {
     public class CreateBookingModel
     {
+        public int Floor { get; set; }
+        public int RoomNumber { get; set; }
+        public List<string> Guests { get; set; }
+
+
     }
 }
