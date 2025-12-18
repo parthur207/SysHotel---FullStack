@@ -36,7 +36,7 @@ body {
 
     .syshotel-logo img {
         /* Reduz o tamanho da logo em telas menores */
-        width: 150px; 
+        width: 15px; 
         border-width: 3px; 
     }
 
@@ -50,10 +50,10 @@ body {
 
 /* Logo principal SysHotel */
 .syshotel-logo {
-    position: absolute; /* O pai da imagem é posicionado */
+    position: fixed; /* O pai da imagem é posicionado */
     top: 2vh; /* Distância do topo da tela. Ajuste conforme sua imagem de fundo. */
-    left: 50%;
-    transform: translate(-50%);
+    right: 10px;
+   
     z-index: auto; /* Garante que fique acima de tudo */
     margin-bottom: 20px;
 }
@@ -72,10 +72,10 @@ body {
     padding:30px 25px;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.2)100%
+        rgba(0, 0, 0, 0.5) 20%,
+        rgba(114, 193, 168)60%
     ); /* Degradê translúcido */
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(3px); 
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.45);
     text-align: center;
@@ -141,8 +141,8 @@ body {
 
 .input-box input:focus {
     border-color: #ff6b6b;
-    border-width: 0.2vmin;
-    box-shadow: 0 0 8px rgba(255, 107, 107, 0.6);
+    border-width: 0.1vmin;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 350);
 }
 
 /* Ícones */
